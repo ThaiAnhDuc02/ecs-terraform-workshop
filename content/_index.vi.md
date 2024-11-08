@@ -9,7 +9,7 @@ chapter = false
 
 #### Kiến trúc
 
-![1](./images/)
+![1](/images/Terraform-architecture.png)
 
 #### Quy trình
 

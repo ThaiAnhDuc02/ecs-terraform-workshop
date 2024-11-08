@@ -9,7 +9,7 @@ chapter = false
 
 #### Architecture
 
-![1](./images/)
+![1](/images/Terraform-architecture.png)
 
 #### Workflow
 
