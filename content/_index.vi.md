@@ -5,7 +5,23 @@ weight = 1
 chapter = false
 +++
 
-## Hạ tầng Terraform tích hợp với GitHub Action
+# Hạ tầng Terraform tích hợp với GitHub Action
+
+#### Kiến trúc
+
+![1](./images/)
+
+#### Quy trình
+
+Để thực hiện bài Workshop này, chung ta có một quy trình đơn giản như sau: 
+
+- Viết một hạ tầng Terraform cho hệ thống sẵn.
+- Dùng lệnh để chạy hạ tầng lên AWS console.
+- Triển khai ECS Service trên hạ tầng đã được tạo sẵn
+- Triển khai CI/CD để tự động hóa quá trình.
+- Tạo Monitoring để giám sát quá trình.
+
+Quy trình này đảm bảo việc triển khai hạ tầng, dịch vụ và CI/CD được tự động hóa, mang lại hiệu quả cao và khả năng kiểm soát toàn diện cho hệ thống trên AWS.
 
 #### Nội dung chính
 

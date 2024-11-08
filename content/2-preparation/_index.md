@@ -9,6 +9,6 @@ pre = "<b>2. </b>"
 
 #### Content
 
-1. [Learn in advance](1-learn-in-advance)
-2. [Install dependencies](2-dependencies)
+1. [Prepare Dependencies](1-dependencies)
+2. [Preparing Docker Hub](2-docker-hub)
 3. [Create Access key, Role and Key pair](3-aws-preparation)

@@ -5,7 +5,24 @@ weight = 1
 chapter = false
 +++
 
-## Infrastructure Terraform Integrated with GitHub Actions
+# Infrastructure Terraform Integrated with GitHub Actions
+
+#### Architecture
+
+![1](./images/)
+
+#### Workflow
+
+To complete this Workshop, we will follow a simple process as outlined below:
+
+- Write the Terraform infrastructure code for the pre-defined system.
+- Use commands to deploy the infrastructure on the AWS console.
+- Deploy ECS Service on the pre-created infrastructure.
+- Set up CI/CD to automate the deployment process.
+- Create Monitoring to observe and manage the system.
+
+This process ensures that the deployment of infrastructure, services, and CI/CD is fully automated, providing high efficiency and comprehensive control over the AWS-based system.
+
 
 #### Table of Contents
 

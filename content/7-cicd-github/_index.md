@@ -7,7 +7,7 @@ pre = "<b>7. </b>"
 +++
 
 
-#### Nội Dung
+#### Content
 
 1. [Clone GitHub template](1-template)
 2. [Create a new project and push code](2-push-code)
