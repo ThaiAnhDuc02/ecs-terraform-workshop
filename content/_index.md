@@ -9,7 +9,7 @@ chapter = false
 
 #### Architecture
 
-![1](/images/Terraform-architecture.png)
+{{< iframe src="/images/Terraform-WS.drawio.html" >}}
 
 #### Workflow
 
