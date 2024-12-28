@@ -9,11 +9,11 @@ chapter = false
 
 #### Kiến trúc
 
-{{< iframe src="/images/Terraform-WS.drawio.html" >}}
+![image](/images/architecture.png)
 
 #### Quy trình
 
-Để thực hiện bài Workshop này, chung ta có một quy trình đơn giản như sau: 
+Để thực hiện bài Workshop này, chung ta có một quy trình đơn giản như sau:
 
 - Viết một hạ tầng Terraform cho hệ thống sẵn.
 - Dùng lệnh để chạy hạ tầng lên AWS console.

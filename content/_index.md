@@ -9,7 +9,7 @@ chapter = false
 
 #### Architecture
 
-{{< iframe src="/images/Terraform-WS.drawio.html" >}}
+![image](/images/architecture.png)
 
 #### Workflow
 
@@ -22,7 +22,6 @@ To complete this Workshop, we will follow a simple process as outlined below:
 - Create Monitoring to observe and manage the system.
 
 This process ensures that the deployment of infrastructure, services, and CI/CD is fully automated, providing high efficiency and comprehensive control over the AWS-based system.
-
 
 #### Table of Contents
 

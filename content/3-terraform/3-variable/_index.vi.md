@@ -13,50 +13,51 @@ pre = "<b>3.3. </b>"
 ```
 # Setup local variables
 locals {
-  region = "ca-central-1"                               # Region mà bạn hiện đang sử dụng
-  author = "DoAn"                                       # Tên của người sử dụng hoặc là dự án
-  network_root_name = "DoAn-network"                    # Tên của VPC
-  vpc_cidr = "10.0.0.0/16"                              # Địa chỉ chính của VPC hạ tầng mạng ảo của bạn
-  compute_root_name = "DoAn-compute"                    # Tên của EC2 instance
-  key_name = "test-terraform"                           # Tên của Key pair mình đã tạo ở phần chuẩn bị
-  
+  region = "ap-southeast-1"
+  author = "DUKE"
+  network_root_name = "FCJ-network"
+  vpc_cidr = "10.0.0.0/16"
+  compute_root_name = "FCJ-compute"
+  key_name = "FCJ-Lab-key"
+
   # RDS database
-  db_username = "admin"                                 # Tên của user name trong RDS
-  db_password = "DoAn123456"                            # Password của database
-  db_name = "Doandb"                                    # Tên của RDS instance
-  
+  db_username = "admin"
+  db_password = "letmein12345"
+  db_name = "fcjdb"
+
   # Cloud Map
-  service_discovery_namespace_name = "fcjresbar.internal"   # Tên namespace của cloud map
-  service_discovery_service_name = "backend"                # Tên dịch vụ bên trong namespace
-  
+  service_discovery_namespace_name = "fcjresbar.internal"
+  service_discovery_service_name = "backend"
+
   # Load Balancer
-  target_group_name = "my-tg"                           # Tên của target group
-  alb_name = "Doan-alb"                                 # Tên của ALB
-  
+  target_group_name = "my-tg"
+  alb_name = "FCJ-alb"
+
   # Task definition of backend
-  backend_family = "fcjresbar-task-be"                  # Tên của task definition backend
-  backend_image = "lyhoangviet/backend:v1.0.2"          # Link image ở trên docker hub của backend
-  mysql_database = "fcjresbar"                          # Tên của database đã tạo
-  db_dialect = "mysql"                                  # dùng để xác định loại cơ sở dữ liệu
-  be_port = "5000"                                      # Port của backend
-  jwt_secret = "0bac010eca699c25c8f62ba86e319c2305beb94641b859c32518cb854addb5f4" # Secret key dùng để mã hóa xác thực 
+  backend_family = "fcjresbar-task-be"
+  backend_image = "730335321184.dkr.ecr.ap-southeast-1.amazonaws.com/backend-image"
+  mysql_database = "fcjresbar"
+  db_dialect = "mysql"
+  be_port = "5000"
+  jwt_secret = "0bac010eca699c25c8f62ba86e319c2305beb94641b859c32518cb854addb5f4"
 
   # Task definition of frontend
-  frontend_family = "fcjresbar-task-fe"                 # Tên của task definition frontend
-  frontend_image = "lyhoangviet/frontend:v1.0.2"        # Link image ở trên docker hub của frontend
-  be_host = "backend.fcjresbar.internal"                # Tên được ánh xạ từ Cloud map
-  
+  frontend_family = "fcjresbar-task-fe"
+  frontend_image = "730335321184.dkr.ecr.ap-southeast-1.amazonaws.com/frontend-image"
+  be_host = "backend.fcjresbar.internal"
+
 
   ec2_instances = [
     {
-      name               = "server_test"                # Tên đằng sau của EC2 instance
-      ami                = "ami-0eb9fdcf0d07bd5ef"      # Ubuntu Server 24.04 LTS
-      instance_type      = "t3.medium"                  # Loại instance muốn sử dụng
-      subnet_id          = module.infrastructure_vpc.subnet_public1_id    # Subnet được tạo ở VPC
-      security_group_ids = [module.security.public_sg_id]                 # Security group được tạo ở SG
+      name               = "server_test"
+      ami                = "ami-06650ca7ed78ff6fa"  # Ubuntu Server 24.04 LTS
+      instance_type      = "t2.medium"
+      subnet_id          = module.infrastructure_vpc.subnet_public1_id
+      security_group_ids = [module.security.public_sg_id]
     },
   ]
 }
+
 ```
 
 {{% notice note %}}
@@ -66,7 +67,7 @@ Lưu ý: Các biến trên để có thể hoạt động tốt, bạn cần ph�
 - Đường dẫn tới code
 
 ```
-vi .\Terraform-DoAn\deploy-infrastructure-ecs\variable.tf
+vi .\deploy-infrastructure-ecs\variable.tf
 ```
 
 ![image](/images/3-terraform/3.3.1.png)
